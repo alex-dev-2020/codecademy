@@ -1,0 +1,88 @@
+Currently on Arrays and Hashes
+
+Use square bracket notation 
+to print the third value of demo_array to the console.
+
+Remember that the third value is at index 2, 
+not at index 3. We start counting indices from zero.
+
+
+demo_array = [100, 200, 300, 400, 500]
+
+print  demo_array[2]
+
+3/16
+Arrays of Non-Numbers
+
+Here’s something you might not have known: 
+you can make an array of any collection of Ruby objects. 
+You can make an array of booleans! An array of strings! 
+The possibilities are (almost) endless.
+
+string_array = ["text", "word", "sentence"]
+
+4/16
+multi_d_array = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+
+multi_d_array.each { |x| puts "#{x}\n" }
+
+[0, 0, 0, 0]
+
+[0, 0, 0, 0]
+
+[0, 0, 0, 0]
+
+[0, 0, 0, 0]
+5/16
+
+my_2d_array = [[1, 2, 3, 4], [true, false, true, false], ["text", "number", "word", "sentence"]]
+
+Introduction to Hashes
+We know that arrays are indexed with numbers that start with 0 and go up to the array’s length minus one. 
+(Think about it: an array with four elements has the indices 0, 1, 2, and 3.)
+
+But what if we want to use numeric indices that don’t go in order from 0 to the end of the array? 
+What if we don’t want to use numbers as indices at all? We’ll need a new array structure called a hash.
+
+Hashes are sort of like JavaScript objects or Python dictionaries. 
+If you haven’t studied those languages, all you need to know that a hash is a collection of key-value pairs. 
+Hash syntax looks like this:
+
+hash = {
+  key1 => value1,
+  key2 => value2,
+  key3 => value3
+}
+Values are assigned to keys using =>. 
+You can use any Ruby object for a key or value.
+
+my_hash = { "name" => "Eric",
+  "age" => 26,
+  "hungry?" => true
+}
+
+puts my_hash["name"]
+puts my_hash["age"]
+puts my_hash["hungry?"]
+
+Eric
+26
+true
+
+7/16
+DATA STRUCTURES
+Using Hash.new
+What we just showed you was hash literal notation. 
+We call it that because you literally describe what you want in the hash: 
+you give it a name and you set it equal to one or more key => value pairs inside curly braces.
+
+You can also create a hash using Hash.new, like so:
+
+my_hash = Hash.new
+Setting a variable equal to Hash.new creates a new, empty hash; 
+it’s the same as setting the variable equal to empty curly braces ({}).
+
+Instructions
+1.
+Use Hash.new to create a new hash called pets. 
+Hash must be capitalized, or Ruby won’t know what you’re talking about!
