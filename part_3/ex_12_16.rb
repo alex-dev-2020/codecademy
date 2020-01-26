@@ -6,3 +6,12 @@ s.each {| sub_array |
         puts y 
       }
    }
+# ham
+# swiss
+# turkey
+# cheddar
+# roast beef
+# gruyere
+
+
+# Process exited with code: 0
