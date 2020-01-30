@@ -16,11 +16,11 @@ end
 # Add your code below!
 print symbols
 # [:HTML, :CSS, :JavaScript, :Python, :Ruby]
-# вариант с использованием .push
+# вариант с использованием .push & .intern
 
 symbols = []
 strings.each do |s| 
-  sym =s.to_sym
+  sym = s.t.intern
   symbols.push(sym)
 end
 # Add your code below!
