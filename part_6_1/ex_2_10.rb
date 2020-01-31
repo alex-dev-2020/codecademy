@@ -44,7 +44,13 @@ case choice
     puts "#{title}: #{rating}"
   end
   when "delete"
-    puts "Deleted!"
+    puts "Please input your title:"
+    title = gets.chomp.to_sym 
+    if movies[title.to_sym].nil?
+      movies.delete(title.to_sym)
+    else
+      puts "Error!"
+    end
   else
     puts "Error!"
 end
