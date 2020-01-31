@@ -16,3 +16,25 @@ choice = gets.chomp
 
 # Please input your choice:
 # the_matrix
+
+case choice
+  when "add" 
+    puts "Please input your title:"
+    title = gets.chomp
+    puts "Please input the rating:"
+    rating = gets.chomp
+    movies[title] =  rating
+    puts "title:" + " " + movies[title] 
+  when "update"
+    puts "Updated!"
+  when "display"
+    puts "Movies!"
+  when "delete"
+    puts "Deleted!"
+  else
+    puts "Error!"
+end
+
+# Please input your choice:
+# add
+# Added!
