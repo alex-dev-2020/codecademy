@@ -21,12 +21,24 @@ case choice
   when "add" 
     puts "Please input your title:"
     title = gets.chomp.to_sym 
-    puts "Please input the rating:"
-    rating = gets.chomp.to_i 
-    movies[title] =  rating
-    puts "title:" + " " + movies[title].to_s
+    if movies[title.to_sym].nil?
+      puts "Please input the rating:"  
+      rating = gets.chomp.to_i 
+      movies[title] =  rating
+      puts "title:" + " " + movies[title].to_s
+    else
+      puts "The movie already exist"
+    end
   when "update"
-    puts "Updated!"
+    puts "Please input your title:"
+      title = gets.chomp.to_sym 
+        if movies[title.to_sym]==nil
+        puts "You're mistaken"
+        else
+          puts "Please input the rating:"  
+          rating = gets.chomp.to_i 
+          movies[title] =  rating
+        end
   when "display"
     puts "Movies!"
   when "delete"
@@ -34,7 +46,3 @@ case choice
   else
     puts "Error!"
 end
-
-# Please input your choice:
-# add
-# Added!
