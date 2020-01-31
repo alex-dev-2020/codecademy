@@ -20,11 +20,11 @@ choice = gets.chomp
 case choice
   when "add" 
     puts "Please input your title:"
-    title = gets.chomp
+    title = gets.chomp.to_sym 
     puts "Please input the rating:"
-    rating = gets.chomp
+    rating = gets.chomp.to_i 
     movies[title] =  rating
-    puts "title:" + " " + movies[title] 
+    puts "title:" + " " + movies[title].to_s
   when "update"
     puts "Updated!"
   when "display"
